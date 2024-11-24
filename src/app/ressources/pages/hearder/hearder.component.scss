@@ -1,0 +1,136 @@
+.containers {
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(27, 117, 227, 0.583);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2px;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 5px;
+    }
+  }
+}
+.rows {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-gap: 10px;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px 0 0 10px;
+  @media screen and (max-width:991px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .logo{
+     display: none;
+    }
+
+    .search-bar{
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      padding-right: 0px;
+      margin-bottom: 10px;
+      .connect {
+        margin-right: 10px;
+        padding: 5px;
+        background-color: rgba(30, 215, 98, 0.88);
+        border: none;
+        border-radius: 5px;
+        color: white;
+      }
+    
+      .pannier {
+        cursor: pointer;
+        margin-left: 10px; // Espace à gauche du panier
+        position: relative;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    
+    
+        span {
+          display: inline-block; // Assurez-vous que le span soit un élément de type bloc
+          border-radius: 100%; // Arrondir le span pour qu'il soit circulaire
+          width: 15px;
+          height: 15px;
+          background-color: rgba(255, 0, 0, 0.667);
+          text-align: center;
+          color: white;
+          font-size:x-small;
+          position: absolute;
+          left: 18px;
+        }
+      }
+    
+    }
+  }
+  p{
+    color: white;
+  }
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  img {
+    width: 15%;
+    position: absolute;
+    left: calc(100%/4);
+    bottom: calc(5% - 20px);
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+
+  .connect {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: rgba(30, 215, 98, 0.88);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .pannier {
+    cursor: pointer;
+    margin-left: 10px; // Espace à gauche du panier
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+
+    span {
+      display: inline-block; // Assurez-vous que le span soit un élément de type bloc
+      border-radius: 50%; // Arrondir le span pour qu'il soit circulaire
+      width: 15px;
+      height: 15px;
+      background-color: rgba(255, 0, 0, 0.667);
+      text-align: center;
+      color: white;
+      font-size: smaller;
+      position: absolute;
+      left: 18px;
+      z-index: 0;
+    }
+  }
+
+}

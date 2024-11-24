@@ -1,0 +1,9 @@
+.ligne{
+    display: flex;
+   width: 100%;
+   overflow: auto;
+   gap: 15px;
+   app-produitcard{
+    width: 1fr;
+   }
+}

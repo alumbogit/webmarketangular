@@ -1,0 +1,54 @@
+
+.cart{
+    align-self: center;
+    width: 15rem;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgba(87, 87, 87, 0.573);
+    border-radius: 5px;
+    .top{
+        display: flex;
+        justify-content: center;
+    }
+    .body{
+        background-color: rgba(71, 68, 68, 0.247);
+        .info{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            .name{
+                font-size: medium;
+            }
+            .cat{
+                font-size: medium;
+                font-weight: 600;
+                font-style: italic;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 10px;
+            }
+        }
+        .decision{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px 5px 10px;
+            span{
+                color: rgba(247, 49, 49, 0.87);
+                font-weight: 600;
+            }
+            button{
+                border: none;
+                padding: 5px;
+                background-color: rgb(76, 222, 141);
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                &:hover{
+                    color: black;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

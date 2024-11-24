@@ -1,0 +1,25 @@
+<div class="cart">
+    <div class="top">
+        <img [src]="datacard().image" alt="">
+    </div>
+    <div class="body">
+        <div class="info">
+            <span class="name">{{datacard().nom}}</span>
+            <span class="cat">
+                <span>{{datacard().categorie}}</span> 
+                <span>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <i class="bi bi-star text-warning"></i>
+                </span>
+            </span>
+        </div>
+        <div class="decision">
+            <span>{{datacard().prix}}</span>
+            <button (click)="envoyerDonnees()">Add</button>
+        </div>
+    </div>
+</div>

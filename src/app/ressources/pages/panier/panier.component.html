@@ -1,0 +1,50 @@
+<app-hearder [search]="this.searchbar"></app-hearder>
+
+<div class="titre">
+  <div class="panier">
+    <h3>Panier</h3>
+  </div>
+  <p>X produits dans le panier</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      
+      <!-- ligne d'un produit -->
+      @for (item of items; track item.id) {
+        <div class="line"></div>
+        <div class="cont">
+          <div class="col-sm-4 image">
+            <img [src]="item.image" alt="">
+          </div>
+  
+          <div class="col-sm-8 contenu">
+            <div class="prod">
+              <p class="p1">{{item.nom}}</p>
+              <p class="p2">note : <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </p>
+              <span class="p3">1200 dispo</span>
+            </div>
+           <div class="prod bas">
+              <span>{{item.categorie}}</span>
+              <span> {{item.prix}}</span>
+           </div>
+          </div>
+        </div>
+        <div class="line"></div>
+      }
+    </div>
+    
+    <div class="col-sm-3">
+      <h5> veillez valider votre paiement </h5>
+      <form>
+        <span>Prix a payer est de : </span> <span class="prix">{{prixpaye}}</span>
+      </form>
+    </div>
+  </div>
+</div>

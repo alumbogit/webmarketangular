@@ -1,0 +1,5 @@
+<div class="contenu">
+    @for (item of mesProd; track item.id) {
+        <app-produitcard [datacard]="item" (clickEnvoyees)="relayerDonnees($event)"></app-produitcard>
+    }
+</div>

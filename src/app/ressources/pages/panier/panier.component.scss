@@ -1,0 +1,110 @@
+.titre{
+    .panier {
+        position: relative;
+        top: 20px;
+        left: 190px;
+        margin-bottom: 30px;
+    
+        h3 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+    p{
+        position: relative;
+        top: 20px;
+        left: 190px;
+    }
+}
+
+.line {
+    position: relative;
+    left: 0px;
+    width: 95%;
+    border-bottom: 1px solid rgba(99, 91, 91, 0.756);
+    margin-bottom: 10px;
+}
+
+.container {
+    margin-top: 30px;
+
+    .col-sm-6 {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .cont{
+            width: 50%;
+            display: flex;
+            gap: 15px;
+            height: 100px;
+            @media screen and (max-width:991px) {
+                height: 150px;
+            }
+            .image {
+                width: 25%;
+                height: 100%;
+                background-color: #f4202027;
+                border-radius: 5px;
+                @media screen and (max-width:991px) {
+                    width: 80%;
+                    background-color: #f4202000;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+    
+            .contenu {
+                height: 100%;
+                width: 100%;
+                .prod {
+                    background-color: #fff;
+                    display: flex;
+                    width: 100%;
+                    .p1{
+                        width: calc(50%);
+                        align-self: flex-start;
+                    }
+                    .p2{
+                        width: calc(80%);
+                        align-self: flex-start;
+                    }
+                    .p3{
+                        width: calc(30%);
+                        align-self: flex-start;
+                    }
+                    p {
+                        font-size: 100%;
+                        font-weight: 600;
+                    }
+                }
+                .bas{
+                    span{ width: calc(100% / 2);}
+                    padding: 0 ;
+                }
+            }
+        }
+    }
+
+
+
+
+    .col-sm-3 {
+        border: 1px solid rgba(0, 0, 0, 0.608);
+        height: 70vh;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.641);
+        width: 50%;
+        h5{
+            text-align: center;
+            text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.472);
+        }
+    }
+}
+.prix{
+    font-size:larger ;
+    font-weight: 600;
+    color: red;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.597);
+}

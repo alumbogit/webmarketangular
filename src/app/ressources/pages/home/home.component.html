@@ -1,0 +1,34 @@
+<app-hearder [search]="searchbar" [panier]="addprod()" [listeProduits]="listAchat()"></app-hearder>
+
+<div class="contain">
+    <app-slide></app-slide>
+</div>
+
+<!-- first produicts line -->
+ <div class="container products">
+    <div class="row">
+        <h4 class="h4">Nos produits vedettes</h4>
+    </div>
+    <div class="row">
+        <app-banner (clickData)="handleData($event)"></app-banner>
+    </div>
+ </div>
+
+ <!-- cette sectioncontient les 20 premiers produits les plus recents ajoutez -->
+
+ <div class="containe">
+    <div class="title">
+        <h4>Passer votre commande </h4>
+    </div>
+    <div class="control">
+        <button>Huiles</button>
+        <button>Boissons</button>
+        <button>Habits</button>
+        <button>Chaussures</button>
+    </div>
+    <div class="row">
+        <app-produitarea (clickData)=" handleData($event)"></app-produitarea>
+    </div>
+ </div>
+
+<app-footer></app-footer>

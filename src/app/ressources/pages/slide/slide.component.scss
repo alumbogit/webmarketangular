@@ -1,0 +1,12 @@
+#carouselExampleIndicators{
+    height: 70vh;
+    .carousel-inner{
+        height: 70vh;
+    }
+    @media screen and (max-width:992px) {
+        height: inherit !important;
+    .carousel-inner{
+        height: inherit !important;
+    }
+    }
+}

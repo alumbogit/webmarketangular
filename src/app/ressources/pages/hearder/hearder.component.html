@@ -1,0 +1,30 @@
+<div class="containers">
+    <div class="rows">
+        @if (search()) {
+        <div class="logo">
+            <img src="/assets/logo.png" alt="">
+        </div>
+
+        <div class="search-bar"><app-search-bar></app-search-bar></div>
+
+        <div class="right">
+            @if (!connexionState()) {
+                <a (click)="connect($event)" class="connect">Se connecter</a>
+            }
+            @if (panier()!=0) {
+                <a (click)="savepanier($event)" class="pannier"><img src="/assets/panier.png"
+                    alt=""><span>{{panier()}}</span></a>
+            }@else {
+                <a title="votre pannier est vide" class="pannier"><img src="/assets/panier.png"
+                    alt=""><span>0</span></a>
+            }
+            <button title="vous n'avez pas de notifications actuellement" class="pannier"><img
+                    src="/assets/notification.png" alt=""><span>0</span></button>
+        </div>
+        }@else {
+            <p>Heureux de vous revoir Mr nom client</p>
+            <p>votre dernier achat remonte au XX-XX-XXXX à HH:mm</p>
+            <p>vous avez deja effectuer X achats dans nos locaux</p>
+        }
+    </div>
+</div>
